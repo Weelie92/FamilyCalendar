@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Family Calendar</title>
+
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script defer type="module" src="./main.js"></script>
+  </head>
+  <body>
+    <div class="rootDiv_" id="divTop">
+      <div id="divTopContainer">
+        <div class="topSection_div" id="topSection_Top"></div>
+        <div class="topSection_div" id="topSection_Bottom"></div>
+      </div>
+    </div>
+    <div class="rootDiv_" id="divBottom">
+      <div id="divBottomContainer">
+        <div id="jokeArea">
+          <select id="language">
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="no">Norwegian</option>
+            <option value="es">Spanish</option>
+            <option value="de">German</option>
+          </select>
+          <button id="dasButton">Get joke!</button>
+          <h3 id="joke"></h3>
+        </div>
+        <button class="bottomSection_div" id="divBottomContainerBtn">Close</button>
+      </div>
+    </div>
+  </body>
+</html>
