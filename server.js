@@ -1,11 +1,12 @@
 import express from 'express';
 
-const server = express();
+const server = new express();
 const port = 8080;
 
 server.set('port', port);
 server.use(express.static('public'));
-server.get('/', (req, res, next) => {
+
+server.get('/', (req, res) => {
   res.status(200).send('Hello World').end();
 });
 
@@ -15,11 +16,15 @@ server.listen(server.get('port'), () => {
 
 server.get('/jokes/:language', (req, res) => {
   const selectedLanguage = req.params.language;
+
   const languageJokes = jokes[selectedLanguage];
+
   if (!languageJokes) {
     return res.status(400).send({ error: 'Invalid language code' });
   }
+
   const randomIndex = Math.floor(Math.random() * Object.keys(languageJokes).length);
+
   const joke = languageJokes[randomIndex].joke;
 
   res.send({ joke });

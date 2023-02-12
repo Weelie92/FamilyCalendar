@@ -36,7 +36,6 @@ class I18nI10n {
   }
 
   localizeDate(date) {
-    // Code to format the date based on the user's language settings
     return date.toLocaleDateString(this.getLanguage());
   }
 }
